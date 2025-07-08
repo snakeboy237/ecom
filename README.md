@@ -3,13 +3,13 @@
 Clone the project
 
 ```bash
-  git clone https://gitlab.com/dredsoftsaros/ecommerce.git
+  git clone https://ecommerce-assignment-admin@bitbucket.org/ecommerce-assignment/ecommerce.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd eCommerce
+  cd ecommerce
 ```
 
 Install dependencies
