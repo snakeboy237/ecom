@@ -1,8 +1,13 @@
 import React from "react";
+import useWallet from "../hooks/useWallet";
+import TransactionButton from "./TransactionButton";
 
 const Home = () => {
+  const { provider, account, network, connectWallet, disconnectWallet } = useWallet();
+
   return (
     <>
+      {/* Existing hero section */}
       <div className="hero border-1 pb-3">
         <div className="card bg-dark text-white border-0 mx-3">
           <img
@@ -22,6 +27,28 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* ✅ Wallet Section */}
+      <div style={{ textAlign: "center", margin: "40px 0" }}>
+        <h2>Blockchain Wallet Integration</h2>
+
+        {!account ? (
+          <button className="btn btn-primary" onClick={connectWallet}>
+            Connect Wallet
+          </button>
+        ) : (
+          <div>
+            <p><strong>Wallet:</strong> {account}</p>
+            <p><strong>Network:</strong> {network}</p>
+            <button className="btn btn-danger" onClick={disconnectWallet}>
+              Disconnect
+            </button>
+          </div>
+        )}
+
+        {/*Transaction Button */}
+        <TransactionButton provider={provider} />
       </div>
     </>
   );
