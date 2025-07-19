@@ -29,7 +29,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* ✅ Wallet Section */}
+      {/*Wallet Section */}
       <div style={{ textAlign: "center", margin: "40px 0" }}>
         <h2>Blockchain Wallet Integration</h2>
 
